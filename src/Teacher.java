@@ -91,11 +91,12 @@ public class Teacher {
      * This method prints out a teacher's name as a string (for use in a
      * drop-down menu)
      *
-     * @return the first letter of the teacher's first name with a period,
-     * followed by their last name. (ex. M. R-D)
+     * @return the first letter of the teacher's last name with a comma followed
+     * by their first name's first letter. (ex. Mike R-D would appear as "R-D,
+     * M.").
      */
     @Override
     public String toString() {
-        return firstName.charAt(0) + ". " + lastName;
+        return lastName + ", " + firstName.charAt(0) + ".";
     }
 }
