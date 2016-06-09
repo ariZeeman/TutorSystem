@@ -8,79 +8,81 @@
  * @author 341167849
  */
 public class Peer {
-    
+
     private String subject; //subject to be taught
-    private String phoneNumber; 
+    private String phoneNumber;
     //private String oneOnOne;
-    private Boolean [][] availability = new Boolean[5][6];
+    private Boolean[][] availability = new Boolean[5][6];
     private String firstName;
     private String lastName;
-    
+
     /**
      *
      * @return
      */
-    public String getSubject(){
+    public String getSubject() {
         return this.subject;
     }
-    
+
     /**
      *
      * @param newSubject
      */
-    public void setSubject(String newSubject){
+    public void setSubject(String newSubject) {
         this.subject = newSubject;
     }
-    
+
     /**
      *
      * @return
      */
-    public String getPhoneNumber(){
+    public String getPhoneNumber() {
         return this.phoneNumber;
     }
-    
+
     /**
      *
      * @param newNumber
      */
-    public void setPhoneNumber(String newNumber){
+    public void setPhoneNumber(String newNumber) {
         this.phoneNumber = newNumber;
     }
-    
+
     /**
      *
      * @return
      */
-    public String getFirst(){
+    public String getFirst() {
         return this.firstName;
     }
-    
+
     /**
      *
      * @param newName
      */
-    public void setFirst(String newName){
+    public void setFirst(String newName) {
         this.firstName = newName;
     }
-    
+
     /**
      *
      * @return
      */
-    public String getLast(){
+    public String getLast() {
         return this.lastName;
     }
-    
+
     /**
      *
      * @param newName
      */
-    public void setLast(String newName){
+    public void setLast(String newName) {
         this.lastName = newName;
     }
 
     /**
+     * @param index1
+     * @param index2
      * @return the availability
      */
     public Boolean getAvailability(int index1, int index2) {
@@ -88,11 +90,12 @@ public class Peer {
     }
 
     /**
-     * @param availability the availability to set
+     * @param index1 the period index
+     * @param index2 the day index
+     * @param result what the boolean value is
      */
     public void setAvailability(int index1, int index2, boolean result) {
         this.availability[index1][index2] = result;
     }
-    
-    
+
 }
