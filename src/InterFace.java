@@ -32,6 +32,7 @@ public class InterFace extends javax.swing.JFrame {
         subjectToFindLabel = new javax.swing.JLabel();
         loginLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        signUpLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,15 +79,24 @@ public class InterFace extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Find a Tutor", jPanel1);
 
+        signUpLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        signUpLabel.setText("Sign up");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1061, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(signUpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(941, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 725, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(signUpLabel)
+                .addContainerGap(673, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Become a peer", jPanel3);
@@ -112,7 +122,7 @@ public class InterFace extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 753, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         pack();
@@ -160,6 +170,7 @@ public class InterFace extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel loginLabel;
+    private javax.swing.JLabel signUpLabel;
     private javax.swing.JTextField subjectToFindField;
     private javax.swing.JLabel subjectToFindLabel;
     // End of variables declaration//GEN-END:variables
