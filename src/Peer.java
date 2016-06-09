@@ -9,7 +9,90 @@
  */
 public class Peer {
     
-    public Peer(){
-        
+    private String subject; //subject to be taught
+    private String phoneNumber; 
+    //private String oneOnOne;
+    private Boolean [][] availability = new Boolean[5][6];
+    private String firstName;
+    private String lastName;
+    
+    /**
+     *
+     * @return
+     */
+    public String getSubject(){
+        return this.subject;
     }
+    
+    /**
+     *
+     * @param newSubject
+     */
+    public void setSubject(String newSubject){
+        this.subject = newSubject;
+    }
+    
+    /**
+     *
+     * @return
+     */
+    public String getPhoneNumber(){
+        return this.phoneNumber;
+    }
+    
+    /**
+     *
+     * @param newNumber
+     */
+    public void setPhoneNumber(String newNumber){
+        this.phoneNumber = newNumber;
+    }
+    
+    /**
+     *
+     * @return
+     */
+    public String getFirst(){
+        return this.firstName;
+    }
+    
+    /**
+     *
+     * @param newName
+     */
+    public void setFirst(String newName){
+        this.firstName = newName;
+    }
+    
+    /**
+     *
+     * @return
+     */
+    public String getLast(){
+        return this.lastName;
+    }
+    
+    /**
+     *
+     * @param newName
+     */
+    public void setLast(String newName){
+        this.lastName = newName;
+    }
+
+    /**
+     * @return the availability
+     */
+    public Boolean getAvailability(int index1, int index2) {
+        return availability[index1][index2];
+    }
+
+    /**
+     * @param availability the availability to set
+     */
+    public void setAvailability(int index1, int index2, boolean result) {
+        this.availability[index1][index2] = result;
+    }
+    
+    
 }
