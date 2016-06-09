@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 349173815
  */
 public class Teacher {
 
-    private final String email, lastName, firstName;
+    private String email;
+    private String lastName;
+    private String firstName;
 
     /**
-     * Default constructor for the Teacher class/object, is subject to change as
-     * we progress through the project and determine what needs to stay or go.
+     * Constructor for the Teacher class/object, is subject to change as we
+     * progress through the project and determine what needs to stay or go.
      *
      * @param mail the email the teacher is registering with
      * @param last the last name of the teacher
@@ -24,5 +25,77 @@ public class Teacher {
         email = mail;
         lastName = last;
         firstName = first;
+    }
+
+    /**
+     * Default empty constructor for a teacher
+     */
+    public Teacher() {
+    }
+
+    /**
+     * Method which retrieves the email of a teacher.
+     *
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Returns the Last name of the teacher
+     *
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * The method which allows the First name to be retrieved
+     *
+     * @return the firstName
+     */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * The method that is used to set an email address for a teacher.
+     *
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * The method which sets the last name for a teacher
+     *
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
+     * The method which sets the first name for a teacher
+     *
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * This method prints out a teacher's name as a string (for use in a
+     * drop-down menu)
+     *
+     * @return the first letter of the teacher's first name with a period,
+     * followed by their last name. (ex. M. R-D)
+     */
+    @Override
+    public String toString() {
+        return firstName.charAt(0) + ". " + lastName;
     }
 }
