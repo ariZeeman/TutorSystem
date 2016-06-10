@@ -10,6 +10,7 @@
 public class InterFace extends javax.swing.JFrame {
 
     boolean subjectCheck = false;
+    //grade9Check
     /**
      * Creates new form InterFace
      */
@@ -37,244 +38,361 @@ public class InterFace extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        findATutorLabel = new javax.swing.JLabel();
-        subjectToFindField = new javax.swing.JTextField();
-        subjectToFindLabel = new javax.swing.JLabel();
+        main = new javax.swing.JTabbedPane();
+        tutorRegistryPane = new javax.swing.JPanel();
+        subjectComboBoxV2 = new javax.swing.JComboBox();
+        confirmationButtonV2 = new javax.swing.JButton();
+        grade11ButtonV2 = new javax.swing.JRadioButton();
+        subjectLabelV2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        grade10ButtonV2 = new javax.swing.JRadioButton();
+        availabilityLabel1 = new javax.swing.JLabel();
+        mondayCheckV2 = new javax.swing.JRadioButton();
+        period1CheckV2 = new javax.swing.JRadioButton();
+        tesudayCheckV2 = new javax.swing.JRadioButton();
+        period4CheckV2 = new javax.swing.JRadioButton();
+        wednesdayCheckV2 = new javax.swing.JRadioButton();
+        period2CheckV2 = new javax.swing.JRadioButton();
+        thursdayCheckV2 = new javax.swing.JRadioButton();
+        period3CheckV2 = new javax.swing.JRadioButton();
+        fridayCheckV2 = new javax.swing.JRadioButton();
+        period5CheckV2 = new javax.swing.JRadioButton();
+        afterSchoolButtonV2 = new javax.swing.JRadioButton();
+        signUpLabelV2 = new javax.swing.JLabel();
+        grade9ButtonV2 = new javax.swing.JRadioButton();
+        loginPane = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
-        confirmButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        peerRegistryPane = new javax.swing.JPanel();
         signUpLabel = new javax.swing.JLabel();
         subjectComboBox = new javax.swing.JComboBox();
         subjectLabel = new javax.swing.JLabel();
         availabilityLabel = new javax.swing.JLabel();
-        monRadio = new javax.swing.JRadioButton();
-        tuesRadio = new javax.swing.JRadioButton();
-        wedRadio = new javax.swing.JRadioButton();
-        thursRadio = new javax.swing.JRadioButton();
-        friRadio = new javax.swing.JRadioButton();
-        confirmationButton2 = new javax.swing.JButton();
+        mondayCheck = new javax.swing.JRadioButton();
+        tuesdayCheck = new javax.swing.JRadioButton();
+        wednesdayCheck = new javax.swing.JRadioButton();
+        thursdayCheck = new javax.swing.JRadioButton();
+        fridayCheck = new javax.swing.JRadioButton();
+        confirmationButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         period1Check = new javax.swing.JRadioButton();
-        period1Check1 = new javax.swing.JRadioButton();
-        period1Check2 = new javax.swing.JRadioButton();
-        period1Check3 = new javax.swing.JRadioButton();
-        period1Check4 = new javax.swing.JRadioButton();
+        period4Check = new javax.swing.JRadioButton();
+        period2Check = new javax.swing.JRadioButton();
+        period3Check = new javax.swing.JRadioButton();
+        period5Check = new javax.swing.JRadioButton();
+        afterSchoolButton = new javax.swing.JRadioButton();
+        grade9Button = new javax.swing.JRadioButton();
+        grade11Button = new javax.swing.JRadioButton();
+        grade10Button = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1061, Short.MAX_VALUE)
+        subjectComboBoxV2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        confirmationButtonV2.setText("Confirm");
+
+        grade11ButtonV2.setText("Grade 11");
+
+        subjectLabelV2.setText("Subject to tutor:");
+
+        jLabel2.setText("Periods available:");
+
+        grade10ButtonV2.setText("Grade 10");
+
+        availabilityLabel1.setText("Times available to be tutored:");
+
+        mondayCheckV2.setText("Monday");
+
+        period1CheckV2.setText("Period 1");
+
+        tesudayCheckV2.setText("Tuesday");
+
+        period4CheckV2.setText("Period 4");
+
+        wednesdayCheckV2.setText("Wednesday");
+
+        period2CheckV2.setText("Period 2");
+
+        thursdayCheckV2.setText("Thursday");
+
+        period3CheckV2.setText("Period 3");
+
+        fridayCheckV2.setText("Friday");
+
+        period5CheckV2.setText("Period 5");
+
+        afterSchoolButtonV2.setText("After School");
+
+        signUpLabelV2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        signUpLabelV2.setText("Sign up");
+
+        grade9ButtonV2.setText("Grade 9");
+
+        javax.swing.GroupLayout tutorRegistryPaneLayout = new javax.swing.GroupLayout(tutorRegistryPane);
+        tutorRegistryPane.setLayout(tutorRegistryPaneLayout);
+        tutorRegistryPaneLayout.setHorizontalGroup(
+            tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(signUpLabelV2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                        .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(subjectLabelV2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(subjectComboBoxV2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(grade9ButtonV2)
+                        .addGap(17, 17, 17)
+                        .addComponent(grade10ButtonV2)
+                        .addGap(18, 18, 18)
+                        .addComponent(grade11ButtonV2))
+                    .addComponent(availabilityLabel1)
+                    .addComponent(confirmationButtonV2)
+                    .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                        .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                                .addComponent(mondayCheckV2)
+                                .addGap(18, 18, 18)
+                                .addComponent(tesudayCheckV2)
+                                .addGap(18, 18, 18)
+                                .addComponent(wednesdayCheckV2))
+                            .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                                .addComponent(period1CheckV2)
+                                .addGap(18, 18, 18)
+                                .addComponent(period2CheckV2)
+                                .addGap(18, 18, 18)
+                                .addComponent(period3CheckV2)))
+                        .addGap(18, 18, 18)
+                        .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(period4CheckV2)
+                            .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                                .addComponent(thursdayCheckV2)
+                                .addGap(18, 18, 18)
+                                .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(period5CheckV2)
+                                    .addComponent(fridayCheckV2))))
+                        .addGap(18, 18, 18)
+                        .addComponent(afterSchoolButtonV2))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 725, Short.MAX_VALUE)
+        tutorRegistryPaneLayout.setVerticalGroup(
+            tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(signUpLabelV2)
+                .addGap(18, 18, 18)
+                .addComponent(subjectLabelV2)
+                .addGap(3, 3, 3)
+                .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(subjectComboBoxV2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grade9ButtonV2)
+                    .addComponent(grade11ButtonV2)
+                    .addComponent(grade10ButtonV2))
+                .addGap(18, 18, 18)
+                .addComponent(availabilityLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(mondayCheckV2)
+                    .addComponent(tesudayCheckV2)
+                    .addComponent(wednesdayCheckV2)
+                    .addComponent(thursdayCheckV2)
+                    .addComponent(fridayCheckV2))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(period1CheckV2)
+                    .addComponent(period2CheckV2)
+                    .addComponent(period3CheckV2)
+                    .addComponent(period4CheckV2)
+                    .addComponent(period5CheckV2)
+                    .addComponent(afterSchoolButtonV2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(confirmationButtonV2)
+                .addContainerGap(466, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Become a Tutor", jPanel2);
-
-        findATutorLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        findATutorLabel.setText("Find a tutor");
-
-        subjectToFindLabel.setText("Subject:");
+        main.addTab("Become a Tutor", tutorRegistryPane);
 
         loginLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         loginLabel.setText("Login");
-
-        confirmButton1.setText("Confirm");
-        confirmButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                confirmButton1MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 111, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 218, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout loginPaneLayout = new javax.swing.GroupLayout(loginPane);
+        loginPane.setLayout(loginPaneLayout);
+        loginPaneLayout.setHorizontalGroup(
+            loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(findATutorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 516, Short.MAX_VALUE)
-                        .addComponent(loginLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(310, 310, 310))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(confirmButton1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(subjectToFindLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(subjectToFindField, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGroup(loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(loginLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(940, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        loginPaneLayout.setVerticalGroup(
+            loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(loginLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(findATutorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(subjectToFindLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(subjectToFindField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confirmButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(loginLabel)
+                .addGap(88, 88, 88)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(379, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Find a Tutor", jPanel1);
+        main.addTab("Find a Tutor", loginPane);
 
         signUpLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         signUpLabel.setText("Sign up");
 
         subjectComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        subjectLabel.setText("Subject to be taught");
+        subjectLabel.setText("Subject to be taught:");
 
         availabilityLabel.setText("Times available to be tutored:");
 
-        monRadio.setText("Monday");
+        mondayCheck.setText("Monday");
 
-        tuesRadio.setText("Tuesday");
+        tuesdayCheck.setText("Tuesday");
 
-        wedRadio.setText("Wednesday");
+        wednesdayCheck.setText("Wednesday");
 
-        thursRadio.setText("Thursday");
+        thursdayCheck.setText("Thursday");
 
-        friRadio.setText("Friday");
+        fridayCheck.setText("Friday");
 
-        confirmationButton2.setText("Confirm");
+        confirmationButton.setText("Confirm");
 
         jLabel1.setText("Periods available:");
 
         period1Check.setText("Period 1");
 
-        period1Check1.setText("Period 1");
+        period4Check.setText("Period 4");
 
-        period1Check2.setText("Period 1");
+        period2Check.setText("Period 2");
 
-        period1Check3.setText("Period 1");
+        period3Check.setText("Period 3");
 
-        period1Check4.setText("Period 1");
+        period5Check.setText("Period 5");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        afterSchoolButton.setText("After School");
+
+        grade9Button.setText("Grade 9");
+
+        grade11Button.setText("Grade 11");
+
+        grade10Button.setText("Grade 10");
+
+        javax.swing.GroupLayout peerRegistryPaneLayout = new javax.swing.GroupLayout(peerRegistryPane);
+        peerRegistryPane.setLayout(peerRegistryPaneLayout);
+        peerRegistryPaneLayout.setHorizontalGroup(
+            peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(peerRegistryPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(signUpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(subjectLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(subjectComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(peerRegistryPaneLayout.createSequentialGroup()
+                        .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(subjectLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(subjectComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(grade9Button)
+                        .addGap(17, 17, 17)
+                        .addComponent(grade10Button)
+                        .addGap(18, 18, 18)
+                        .addComponent(grade11Button))
                     .addComponent(availabilityLabel)
-                    .addComponent(confirmationButton2)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(monRadio)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tuesRadio)))
+                    .addComponent(confirmationButton)
+                    .addGroup(peerRegistryPaneLayout.createSequentialGroup()
+                        .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(peerRegistryPaneLayout.createSequentialGroup()
+                                .addComponent(mondayCheck)
                                 .addGap(18, 18, 18)
-                                .addComponent(wedRadio))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(tuesdayCheck)
+                                .addGap(18, 18, 18)
+                                .addComponent(wednesdayCheck))
+                            .addGroup(peerRegistryPaneLayout.createSequentialGroup()
                                 .addComponent(period1Check)
                                 .addGap(18, 18, 18)
-                                .addComponent(period1Check2)
+                                .addComponent(period2Check)
                                 .addGap(18, 18, 18)
-                                .addComponent(period1Check3)))
+                                .addComponent(period3Check)))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(period1Check1)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(thursRadio)
+                        .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(period4Check)
+                            .addGroup(peerRegistryPaneLayout.createSequentialGroup()
+                                .addComponent(thursdayCheck)
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(period1Check4)
-                                    .addComponent(friRadio))))))
-                .addContainerGap(630, Short.MAX_VALUE))
+                                .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(period5Check)
+                                    .addComponent(fridayCheck))))
+                        .addGap(18, 18, 18)
+                        .addComponent(afterSchoolButton))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        peerRegistryPaneLayout.setVerticalGroup(
+            peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(peerRegistryPaneLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(signUpLabel)
                 .addGap(18, 18, 18)
                 .addComponent(subjectLabel)
-                .addGap(4, 4, 4)
-                .addComponent(subjectComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(subjectComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(grade9Button)
+                    .addComponent(grade11Button)
+                    .addComponent(grade10Button))
                 .addGap(18, 18, 18)
                 .addComponent(availabilityLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(monRadio)
-                    .addComponent(tuesRadio)
-                    .addComponent(wedRadio)
-                    .addComponent(thursRadio)
-                    .addComponent(friRadio))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
+                .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(mondayCheck)
+                    .addComponent(tuesdayCheck)
+                    .addComponent(wednesdayCheck)
+                    .addComponent(thursdayCheck)
+                    .addComponent(fridayCheck))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(peerRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(period1Check)
-                    .addComponent(period1Check2)
-                    .addComponent(period1Check3)
-                    .addComponent(period1Check1)
-                    .addComponent(period1Check4))
-                .addGap(23, 23, 23)
-                .addComponent(confirmationButton2)
-                .addContainerGap(447, Short.MAX_VALUE))
+                    .addComponent(period2Check)
+                    .addComponent(period3Check)
+                    .addComponent(period4Check)
+                    .addComponent(period5Check)
+                    .addComponent(afterSchoolButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(confirmationButton)
+                .addContainerGap(466, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Become a peer", jPanel3);
+        main.addTab("Become a peer", peerRegistryPane);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(main)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(main)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void confirmButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmButton1MouseClicked
-        // TODO add your handling code here:
-//        if (){
-//        subjectCheck = true;    
-//        }
-    }//GEN-LAST:event_confirmButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -312,32 +430,52 @@ public class InterFace extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton afterSchoolButton;
+    private javax.swing.JRadioButton afterSchoolButtonV2;
     private javax.swing.JLabel availabilityLabel;
+    private javax.swing.JLabel availabilityLabel1;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton confirmButton1;
-    private javax.swing.JButton confirmationButton2;
-    private javax.swing.JLabel findATutorLabel;
-    private javax.swing.JRadioButton friRadio;
+    private javax.swing.JButton confirmationButton;
+    private javax.swing.JButton confirmationButtonV2;
+    private javax.swing.JRadioButton fridayCheck;
+    private javax.swing.JRadioButton fridayCheckV2;
+    private javax.swing.JRadioButton grade10Button;
+    private javax.swing.JRadioButton grade10ButtonV2;
+    private javax.swing.JRadioButton grade11Button;
+    private javax.swing.JRadioButton grade11ButtonV2;
+    private javax.swing.JRadioButton grade9Button;
+    private javax.swing.JRadioButton grade9ButtonV2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel loginLabel;
-    private javax.swing.JRadioButton monRadio;
+    private javax.swing.JPanel loginPane;
+    private javax.swing.JTabbedPane main;
+    private javax.swing.JRadioButton mondayCheck;
+    private javax.swing.JRadioButton mondayCheckV2;
+    private javax.swing.JPanel peerRegistryPane;
     private javax.swing.JRadioButton period1Check;
-    private javax.swing.JRadioButton period1Check1;
-    private javax.swing.JRadioButton period1Check2;
-    private javax.swing.JRadioButton period1Check3;
-    private javax.swing.JRadioButton period1Check4;
+    private javax.swing.JRadioButton period1CheckV2;
+    private javax.swing.JRadioButton period2Check;
+    private javax.swing.JRadioButton period2CheckV2;
+    private javax.swing.JRadioButton period3Check;
+    private javax.swing.JRadioButton period3CheckV2;
+    private javax.swing.JRadioButton period4Check;
+    private javax.swing.JRadioButton period4CheckV2;
+    private javax.swing.JRadioButton period5Check;
+    private javax.swing.JRadioButton period5CheckV2;
     private javax.swing.JLabel signUpLabel;
+    private javax.swing.JLabel signUpLabelV2;
     private javax.swing.JComboBox subjectComboBox;
+    private javax.swing.JComboBox subjectComboBoxV2;
     private javax.swing.JLabel subjectLabel;
-    private javax.swing.JTextField subjectToFindField;
-    private javax.swing.JLabel subjectToFindLabel;
-    private javax.swing.JRadioButton thursRadio;
-    private javax.swing.JRadioButton tuesRadio;
-    private javax.swing.JRadioButton wedRadio;
+    private javax.swing.JLabel subjectLabelV2;
+    private javax.swing.JRadioButton tesudayCheckV2;
+    private javax.swing.JRadioButton thursdayCheck;
+    private javax.swing.JRadioButton thursdayCheckV2;
+    private javax.swing.JRadioButton tuesdayCheck;
+    private javax.swing.JPanel tutorRegistryPane;
+    private javax.swing.JRadioButton wednesdayCheck;
+    private javax.swing.JRadioButton wednesdayCheckV2;
     // End of variables declaration//GEN-END:variables
 }
