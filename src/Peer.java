@@ -20,7 +20,7 @@ public class Peer {
 
     /**
      *
-     * @return
+     * @return2
      */
     public String getSubject() {
         return this.subject;
