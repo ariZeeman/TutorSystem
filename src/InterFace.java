@@ -14,6 +14,11 @@ public class InterFace extends javax.swing.JFrame {
      */
     public InterFace() {
         initComponents();
+        subjectComboBox.removeAllItems();
+        subjectComboBox.addItem("Subject 1");
+        subjectComboBox.addItem("Subject 2");
+        subjectComboBox.addItem("Subject 3");
+        subjectComboBox.addItem("Subject 4");
     }
 
     /**
@@ -25,15 +30,24 @@ public class InterFace extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         findATutorLabel = new javax.swing.JLabel();
         subjectToFindField = new javax.swing.JTextField();
         subjectToFindLabel = new javax.swing.JLabel();
         loginLabel = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         signUpLabel = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        subjectComboBox = new javax.swing.JComboBox();
+        subjectLabel = new javax.swing.JLabel();
+        availabilityLabel = new javax.swing.JLabel();
+        monRadio = new javax.swing.JRadioButton();
+        tuesRadio = new javax.swing.JRadioButton();
+        wedRadio = new javax.swing.JRadioButton();
+        thursRadio = new javax.swing.JRadioButton();
+        friRadio = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,9 +81,9 @@ public class InterFace extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(findATutorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginLabel))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(loginLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(findATutorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(subjectToFindLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -78,28 +92,6 @@ public class InterFace extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Find a Tutor", jPanel1);
-
-        signUpLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        signUpLabel.setText("Sign up");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(signUpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(941, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(signUpLabel)
-                .addContainerGap(673, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Become a peer", jPanel3);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -113,6 +105,72 @@ public class InterFace extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Become a Tutor", jPanel2);
+
+        signUpLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        signUpLabel.setText("Sign up");
+
+        subjectComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        subjectLabel.setText("Subject to be taught");
+
+        availabilityLabel.setText("Times available to be tutored:");
+
+        monRadio.setText("Monday");
+
+        tuesRadio.setText("Tuesday");
+
+        wedRadio.setText("Wednesday");
+
+        thursRadio.setText("Thursday");
+
+        friRadio.setText("Friday");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(monRadio)
+                        .addGap(18, 18, 18)
+                        .addComponent(tuesRadio)
+                        .addGap(18, 18, 18)
+                        .addComponent(wedRadio)
+                        .addGap(18, 18, 18)
+                        .addComponent(thursRadio)
+                        .addGap(18, 18, 18)
+                        .addComponent(friRadio))
+                    .addComponent(signUpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(subjectLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(subjectComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(availabilityLabel))
+                .addContainerGap(640, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(signUpLabel)
+                .addGap(18, 18, 18)
+                .addComponent(subjectLabel)
+                .addGap(4, 4, 4)
+                .addComponent(subjectComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(availabilityLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(monRadio)
+                    .addComponent(tuesRadio)
+                    .addComponent(wedRadio)
+                    .addComponent(thursRadio)
+                    .addComponent(friRadio))
+                .addContainerGap(555, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Become a peer", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,14 +222,23 @@ public class InterFace extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel availabilityLabel;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel findATutorLabel;
+    private javax.swing.JRadioButton friRadio;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel loginLabel;
+    private javax.swing.JRadioButton monRadio;
     private javax.swing.JLabel signUpLabel;
+    private javax.swing.JComboBox subjectComboBox;
+    private javax.swing.JLabel subjectLabel;
     private javax.swing.JTextField subjectToFindField;
     private javax.swing.JLabel subjectToFindLabel;
+    private javax.swing.JRadioButton thursRadio;
+    private javax.swing.JRadioButton tuesRadio;
+    private javax.swing.JRadioButton wedRadio;
     // End of variables declaration//GEN-END:variables
 }
