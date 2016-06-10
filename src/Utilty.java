@@ -1,6 +1,7 @@
-
 import java.io.File;
-import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -39,8 +40,18 @@ public class Utilty {
         return array;
     }
 
-    public Tutor[] createArrayFromFile() {
+    public Tutor[] createTutorFromFile() throws FileNotFoundException {
+        File f = new File("tutors.txt");
+        Scanner s = new Scanner(f);
+        ArrayList<Tutor> temp = new ArrayList<>();
+        while (s.hasNext()) {
+            String st = s.nextLine();
+            String[] array = (st.split(","));
+            temp.setSubject(array[0]);
+            temp.set;
+        }
         return null;
+
     }
     
     public void addObjectToFile(Object o, PrintWriter pw){
