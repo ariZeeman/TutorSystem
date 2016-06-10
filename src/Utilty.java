@@ -1,3 +1,7 @@
+
+import java.io.File;
+import java.io.PrintWriter;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -38,4 +42,11 @@ public class Utilty {
     public Tutor[] createArrayFromFile() {
         return null;
     }
+    
+    public void addObjectToFile(Object o, PrintWriter pw){
+        pw.println(o.toString());
+    }
+    
+    
+    
 }
