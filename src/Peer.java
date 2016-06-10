@@ -16,6 +16,7 @@ public class Peer {
     private Boolean[][] availability = new Boolean[5][6];
     private String firstName;
     private String lastName;
+    private Boolean taken; //represents whether the student has a tutor
 
     /**
      *
