@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -47,8 +48,8 @@ public class Utilty {
         while (s.hasNext()) {
             String st = s.nextLine();
             String[] array = (st.split(","));
-            temp.setSubject(array[0]);
-            temp.set;
+       //     temp.setSubject(array[0]);
+      //      temp.set;
         }
         return null;
 
