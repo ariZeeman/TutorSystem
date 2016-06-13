@@ -21,10 +21,10 @@ public class Teacher {
      * @param last the last name of the teacher
      * @param first the first name of the teacher
      */
-    public Teacher(String mail, String last, String first) {
-        email = mail;
-        lastName = last;
-        firstName = first;
+    public Teacher(String first, String last, String email) {
+        this.firstName = first;
+        this.lastName = last;
+        this.email = email;
     }
 
     /**
@@ -97,6 +97,6 @@ public class Teacher {
      */
     @Override
     public String toString() {
-        return lastName + ", " + firstName.charAt(0) + ".";
+        return firstName + "," + lastName + "," + email;
     }
 }
