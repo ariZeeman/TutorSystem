@@ -19,10 +19,25 @@ public class Tutor implements Comparable {
     private boolean[][] availability = new boolean[5][6];
     private boolean visibility = false;
 
-    /**
-     * Default constructor for the tutor object
+    /** Default constructor for the tutor object
+     *
      */
-    public Tutor() {
+    public Tutor(){
+    }
+    
+    
+    /**
+     * 
+     * @param subject subject for tutor to teach
+     * @param phoneNumber phoneNumber of tutor
+     * @param firstName tutors first name
+     * @param lastName tutors last name
+     */
+    public Tutor(String subject, String firstName, String lastName, String phoneNumber) {
+        this.subject = subject;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
     }
 
     /**

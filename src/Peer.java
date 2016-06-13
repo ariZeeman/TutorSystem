@@ -11,14 +11,16 @@ public class Peer {
 
     private String subject; //subject to be taught
     private String phoneNumber;
+    private String email;
     //private String oneOnOne;
     private Boolean[][] availability = new Boolean[5][6];
     private String firstName;
     private String lastName;
+    private Boolean taken; //represents whether the student has a tutor
 
     /**
      *
-     * @return
+     * @return2
      */
     public String getSubject() {
         return this.subject;
@@ -96,6 +98,31 @@ public class Peer {
      */
     public void setAvailability(int index1, int index2, boolean result) {
         this.availability[index1][index2] = result;
+    }
+
+    /**
+     * @return the email of student
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    @Override
+    public String toString(){
+        String toReturn = this.subject + "," + this.firstName + "," + this.lastName + "," + this.phoneNumber + "," + this.email;
+        for (int x = 0; x < 5; x++){
+            for (int y = 0; y < 6; y++){
+                toReturn += availability[x][y];
+            }
+        }
+        return toReturn;
     }
 
 }

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -40,31 +41,37 @@ public class Utilty {
         return array;
     }
 
-    public Tutor[] createTutorFromFile() throws FileNotFoundException {
+    public Tutor createTutorFromFile() throws FileNotFoundException { //have the scanner being used as a parameter? also return array of turors, or just one?
         File f = new File("tutors.txt");
         Scanner s = new Scanner(f);
         ArrayList<Tutor> list = new ArrayList<>();
         int counter = 0;
-        while (s.hasNext()) {
-            list.add(new Tutor());
-            String st = s.nextLine();
-            String[] array = (st.split(","));
-            list.get(counter).setSubject(array[0]);
-            list.get(counter).setFirstName(array[1]);
-            list.get(counter).setLastName(array[2]);
-            list.get(counter).setPhoneNumber(array[3]);
-            list.get(counter).setEmail(array[4]);
-            int m = 5;
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 6; j++) {
-                    list.get(counter).setAvailability(i, j, Boolean.parseBoolean(array[m]));
-                    m++;
-                }
+
+        list.add(new Tutor());
+        String st = s.nextLine();
+        String[] array = (st.split(","));
+        list.get(counter).setSubject(array[0]);
+        list.get(counter).setFirstName(array[1]);
+        list.get(counter).setLastName(array[2]);
+        list.get(counter).setPhoneNumber(array[3]);
+        list.get(counter).setEmail(array[4]);
+        int m = 5;
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 6; j++) {
+                list.get(counter).setAvailability(i, j, Boolean.parseBoolean(array[m]));
+                m++;
             }
-            list.get(counter).setVisibility(Boolean.parseBoolean(array[36]));
-            counter++;
         }
-        return null;
+        list.get(counter).setVisibility(Boolean.parseBoolean(array[36]));
+        counter++;
+
+        Tutor temp = new Tutor(array[0], array[1], array[2], array[3]); //initializes tutor with info from line
+        return temp;
 
     }
+
+    public void addObjectToFile(Object o, PrintWriter pw) {
+        pw.println(o.toString());
+    }
+
 }
