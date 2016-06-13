@@ -105,7 +105,7 @@ public class InterFace extends javax.swing.JFrame {
 
         grade10ButtonV2.setText("Grade 10");
 
-        availabilityLabel1.setText("Times available to be tutored:");
+        availabilityLabel1.setText("Times available to tutor:");
 
         mondayCheckV2.setText("Monday");
 
