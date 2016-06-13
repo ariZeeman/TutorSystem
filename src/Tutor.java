@@ -7,20 +7,56 @@
  *
  * @author 349173815
  */
-public class Tutor {
+public class Tutor implements Comparable {
 
     private String subject;
     private String firstName, lastName;
     private String phoneNumber;
     private int maxPerSession;
+    private int currentSession = 0;
     private String email;
     //first array dimension is the days, second is the period
     private boolean[][] availability = new boolean[5][6];
+    private boolean visibility = false;
+
+    /** Default constructor for the tutor object
+     *
+     */
+    public Tutor(){
+    }
+    
+    
+    /**
+     * 
+     * @param subject subject for tutor to teach
+     * @param phoneNumber phoneNumber of tutor
+     * @param firstName tutors first name
+     * @param lastName tutors last name
+     */
+    public Tutor(String subject, String firstName, String lastName, String phoneNumber) {
+        this.subject = subject;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+    }
 
     /**
-     * Default constructor for the tutor object
+     * The order this is written in!!!!!!!!v important!!!!!!
+     * Subject,FirstName,LastName,PhoneNumber,MaxPerSession,CurrentSession,Email,Availability[5][6],Visibility
+     *
+     * @return String value to write to files
      */
-    public Tutor() {
+    @Override
+    public String toString() {
+        String string;
+        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + maxPerSession + "," + currentSession + "," + email + ",";
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 6; j++) {
+                string = string + availability[i][j] + ",";
+            }
+        }
+        string = string + visibility + ",";
+        return string;
     }
 
     /**
@@ -59,6 +95,26 @@ public class Tutor {
             throw new ArrayIndexOutOfBoundsException();
         }
         return getAvailability()[i][j];
+    }
+
+    /**
+     * Method which allows visibility (meaning they can be found by the search
+     * program, this is set to true when a teacher signs off on a student).
+     *
+     * @param b the value of visibility
+     */
+    public void setVisibility(boolean b) {
+        visibility = b;
+    }
+
+    /**
+     * This method returns whether the tutor is visible to the search algorithm
+     * or not.
+     *
+     * @return whether or not the tutor can be "seen" by the search algorithm
+     */
+    public boolean getVisibility() {
+        return visibility;
     }
 
     /**
@@ -163,5 +219,17 @@ public class Tutor {
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    /**
+     * When a
+     *
+     * @param o
+     * @return
+     */
+    @Override
+    public int compareTo(Object o) {
+        Tutor b = (Tutor) o;
+        return this.subject.compareTo(b.subject);
     }
 }
