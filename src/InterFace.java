@@ -8,9 +8,9 @@
  * @author 068682053
  */
 public class InterFace extends javax.swing.JFrame {
-
+    
     boolean subjectCheck = false;
-    //grade9Check
+    //.setVisible() = true;
     /**
      * Creates new form InterFace
      */
@@ -26,6 +26,7 @@ public class InterFace extends javax.swing.JFrame {
         subjectComboBox.addItem("Science");
         subjectComboBox.addItem("FI French");
         subjectComboBox.addItem("Other");
+        grade9Button.setVisible(false);
     }
 
     /**
@@ -60,9 +61,6 @@ public class InterFace extends javax.swing.JFrame {
         afterSchoolButtonV2 = new javax.swing.JRadioButton();
         signUpLabelV2 = new javax.swing.JLabel();
         grade9ButtonV2 = new javax.swing.JRadioButton();
-        loginPane = new javax.swing.JPanel();
-        loginLabel = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
         peerRegistryPane = new javax.swing.JPanel();
         signUpLabel = new javax.swing.JLabel();
         subjectComboBox = new javax.swing.JComboBox();
@@ -84,6 +82,9 @@ public class InterFace extends javax.swing.JFrame {
         grade9Button = new javax.swing.JRadioButton();
         grade11Button = new javax.swing.JRadioButton();
         grade10Button = new javax.swing.JRadioButton();
+        loginPane = new javax.swing.JPanel();
+        loginLabel = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,7 +94,7 @@ public class InterFace extends javax.swing.JFrame {
 
         grade11ButtonV2.setText("Grade 11");
 
-        subjectLabelV2.setText("Subject to tutor:");
+        subjectLabelV2.setText("Subject to tutor:      ");
 
         jLabel2.setText("Periods available:");
 
@@ -137,10 +138,10 @@ public class InterFace extends javax.swing.JFrame {
                 .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(signUpLabelV2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(tutorRegistryPaneLayout.createSequentialGroup()
-                        .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(subjectLabelV2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(subjectComboBoxV2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(tutorRegistryPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(subjectLabelV2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(subjectComboBoxV2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(grade9ButtonV2)
                         .addGap(17, 17, 17)
                         .addComponent(grade10ButtonV2)
@@ -208,49 +209,12 @@ public class InterFace extends javax.swing.JFrame {
                     .addComponent(period4CheckV2)
                     .addComponent(period5CheckV2)
                     .addComponent(afterSchoolButtonV2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(confirmationButtonV2)
-                .addContainerGap(466, Short.MAX_VALUE))
+                .addContainerGap(450, Short.MAX_VALUE))
         );
 
         main.addTab("Become a Tutor", tutorRegistryPane);
-
-        loginLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        loginLabel.setText("Login");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 111, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 218, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout loginPaneLayout = new javax.swing.GroupLayout(loginPane);
-        loginPane.setLayout(loginPaneLayout);
-        loginPaneLayout.setHorizontalGroup(
-            loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(940, Short.MAX_VALUE))
-        );
-        loginPaneLayout.setVerticalGroup(
-            loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(loginLabel)
-                .addGap(88, 88, 88)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(379, Short.MAX_VALUE))
-        );
-
-        main.addTab("Find a Tutor", loginPane);
 
         signUpLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         signUpLabel.setText("Sign up");
@@ -378,7 +342,44 @@ public class InterFace extends javax.swing.JFrame {
                 .addContainerGap(466, Short.MAX_VALUE))
         );
 
-        main.addTab("Become a peer", peerRegistryPane);
+        main.addTab("Become a Peer", peerRegistryPane);
+
+        loginLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        loginLabel.setText("Login");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 111, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 218, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout loginPaneLayout = new javax.swing.GroupLayout(loginPane);
+        loginPane.setLayout(loginPaneLayout);
+        loginPaneLayout.setHorizontalGroup(
+            loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(loginLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(940, Short.MAX_VALUE))
+        );
+        loginPaneLayout.setVerticalGroup(
+            loginPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(loginLabel)
+                .addGap(88, 88, 88)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(379, Short.MAX_VALUE))
+        );
+
+        main.addTab("Find a Tutor", loginPane);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
