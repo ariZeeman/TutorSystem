@@ -46,7 +46,6 @@ public class Utilty {
         Scanner s = new Scanner(f);
         ArrayList<Tutor> list = new ArrayList<>();
         int counter = 0;
-
         list.add(new Tutor());
         String st = s.nextLine();
         String[] array = (st.split(","));
@@ -64,10 +63,8 @@ public class Utilty {
         }
         list.get(counter).setVisibility(Boolean.parseBoolean(array[36]));
         counter++;
-
         Tutor temp = new Tutor(array[0], array[1], array[2], array[3]); //initializes tutor with info from line
         return temp;
-
     }
 
     public void addObjectToFile(Object o, PrintWriter pw) {
