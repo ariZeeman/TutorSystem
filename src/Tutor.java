@@ -12,8 +12,8 @@ public class Tutor implements Comparable {
     private String subject;
     private String firstName, lastName;
     private String phoneNumber;
-    private int maxPerSession;
-    private int currentSession = 0;
+//    private int maxPerSession;
+//    private int currentSession = 0;
     private String email;
     //first array dimension is the days, second is the period
     private boolean[][] availability = new boolean[5][6];
@@ -27,14 +27,14 @@ public class Tutor implements Comparable {
 
     /**
      * The order this is written in!!!!!!!!v important!!!!!!
-     * Subject,FirstName,LastName,PhoneNumber,MaxPerSession,CurrentSession,Email,Availability[5][6],Visibility
+     * Subject,FirstName,LastName,PhoneNumber,Email,Availability[5][6],Visibility
      *
      * @return String value to write to files
      */
     @Override
     public String toString() {
         String string;
-        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + maxPerSession + "," + currentSession + "," + email + ",";
+        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + ","  + email + ",";
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
                 string = string + availability[i][j] + ",";
@@ -157,12 +157,12 @@ public class Tutor implements Comparable {
         return phoneNumber;
     }
 
-    /**
-     * @return the maxPerSession
-     */
-    public int getMaxPerSession() {
-        return maxPerSession;
-    }
+//    /**
+//     * @return the maxPerSession
+//     */
+//    public int getMaxPerSession() {
+//        return maxPerSession;
+//    }
 
     /**
      * @return the email
@@ -192,12 +192,12 @@ public class Tutor implements Comparable {
         this.phoneNumber = phoneNumber;
     }
 
-    /**
-     * @param maxPerSession the maxPerSession to set
-     */
-    public void setMaxPerSession(int maxPerSession) {
-        this.maxPerSession = maxPerSession;
-    }
+//    /**
+//     * @param maxPerSession the maxPerSession to set
+//     */
+//    public void setMaxPerSession(int maxPerSession) {
+//        this.maxPerSession = maxPerSession;
+//    }
 
     /**
      * @param email the email to set

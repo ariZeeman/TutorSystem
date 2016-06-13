@@ -43,12 +43,26 @@ public class Utilty {
     public Tutor[] createTutorFromFile() throws FileNotFoundException {
         File f = new File("tutors.txt");
         Scanner s = new Scanner(f);
-        ArrayList<Tutor> temp = new ArrayList<>();
+        ArrayList<Tutor> list = new ArrayList<>();
+        int counter = 0;
         while (s.hasNext()) {
+            list.add(new Tutor());
             String st = s.nextLine();
             String[] array = (st.split(","));
-            temp.setSubject(array[0]);
-            temp.set;
+            list.get(counter).setSubject(array[0]);
+            list.get(counter).setFirstName(array[1]);
+            list.get(counter).setLastName(array[2]);
+            list.get(counter).setPhoneNumber(array[3]);
+            list.get(counter).setEmail(array[4]);
+            int m = 5;
+            for (int i = 0; i < 5; i++) {
+                for (int j = 0; j < 6; j++) {
+                    list.get(counter).setAvailability(i, j, Boolean.parseBoolean(array[m]));
+                    m++;
+                }
+            }
+            list.get(counter).setVisibility(Boolean.parseBoolean(array[36]));
+            counter++;
         }
         return null;
 
