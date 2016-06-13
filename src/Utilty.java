@@ -41,24 +41,21 @@ public class Utilty {
         return array;
     }
 
-    public Tutor[] createTutorFromFile() throws FileNotFoundException {
+    public Tutor createTutorFromFile() throws FileNotFoundException { //have the scanner being used as a parameter? also return array of turors, or just one?
         File f = new File("tutors.txt");
         Scanner s = new Scanner(f);
-        ArrayList<Tutor> temp = new ArrayList<>();
+        //ArrayList<Tutor> temp = new ArrayList<>();
+        String[] array = null; //array of info for tutor
         while (s.hasNext()) {
-            String st = s.nextLine();
-            String[] array = (st.split(","));
-       //     temp.setSubject(array[0]);
-      //      temp.set;
+            array = s.nextLine().split(",");
         }
-        return null;
+        Tutor temp = new Tutor(array[0], array[1], array[2], array[3]); //initializes tutor with info from line
+        return temp;
 
     }
-    
-    public void addObjectToFile(Object o, PrintWriter pw){
+
+    public void addObjectToFile(Object o, PrintWriter pw) {
         pw.println(o.toString());
     }
-    
-    
-    
+
 }
