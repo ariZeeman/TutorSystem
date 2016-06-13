@@ -93,7 +93,6 @@ public class InterFace extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    
         subjectComboBoxV2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         confirmationButtonV2.setText("Confirm");
@@ -440,7 +439,7 @@ public class InterFace extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_loginButtonMouseClicked
 
     /**
