@@ -12,22 +12,20 @@ public class Tutor implements Comparable {
     private String subject;
     private String firstName, lastName;
     private String phoneNumber;
-//    private int maxPerSession;
-//    private int currentSession = 0;
     private String email;
-    //first array dimension is the days, second is the period
     private boolean[][] availability = new boolean[5][6];
     private boolean visibility = false;
 
-    /** Default constructor for the tutor object
+    /**
+     * Default constructor for the tutor object
      *
      */
-    public Tutor(){
+    public Tutor() {
     }
-    
-    
+
     /**
-     * 
+     * Constructor for the tutor with Subject, FirstName, LastName, PhoneNumber.
+     *
      * @param subject subject for tutor to teach
      * @param phoneNumber phoneNumber of tutor
      * @param firstName tutors first name
@@ -49,7 +47,7 @@ public class Tutor implements Comparable {
     @Override
     public String toString() {
         String string;
-        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + ","  + email + ",";
+        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + email + ",";
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
                 string = string + availability[i][j] + ",";
@@ -172,13 +170,6 @@ public class Tutor implements Comparable {
         return phoneNumber;
     }
 
-//    /**
-//     * @return the maxPerSession
-//     */
-//    public int getMaxPerSession() {
-//        return maxPerSession;
-//    }
-
     /**
      * @return the email
      */
@@ -206,13 +197,6 @@ public class Tutor implements Comparable {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
-//    /**
-//     * @param maxPerSession the maxPerSession to set
-//     */
-//    public void setMaxPerSession(int maxPerSession) {
-//        this.maxPerSession = maxPerSession;
-//    }
 
     /**
      * @param email the email to set
