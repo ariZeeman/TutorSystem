@@ -61,6 +61,15 @@ public class Utilty {
         Peer temp = new Peer(array[0], array[1], array[2], array[3]);
         return temp;
     }
+    
+    public Teacher createTeacherFromFile(Scanner s){
+        String[] array = null; //array of info for peer
+        while (s.hasNext()) {
+            array = s.nextLine().split(",");
+        }
+        Teacher temp = new Teacher(array[0], array[1], array[2]);
+        return temp;
+    }
 
     public void addObjectToFile(Object o, PrintWriter pw) {
         pw.println(o.toString());
