@@ -52,6 +52,15 @@ public class Utilty {
         Tutor temp = new Tutor(array[0], array[1], array[2], array[3]); //initializes tutor with info from line
         return temp;
     }
+    
+    public Peer createPeerFromFile(Scanner s){
+        String[] array = null; //array of info for peer
+        while (s.hasNext()) {
+            array = s.nextLine().split(",");
+        }
+        Peer temp = new Peer(array[0], array[1], array[2], array[3]);
+        return temp;
+    }
 
     public void addObjectToFile(Object o, PrintWriter pw) {
         pw.println(o.toString());
