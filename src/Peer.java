@@ -18,6 +18,18 @@ public class Peer {
     private String lastName;
     private Boolean taken; //represents whether the student has a tutor
 
+    
+    public Peer(){
+    }
+    
+    public Peer(String subject, String firstName, String lastName, String phoneNumber){
+        this.subject = subject;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+    }
+    
+    
     /**
      *
      * @return2
@@ -119,7 +131,7 @@ public class Peer {
         String toReturn = this.subject + "," + this.firstName + "," + this.lastName + "," + this.phoneNumber + "," + this.email;
         for (int x = 0; x < 5; x++){
             for (int y = 0; y < 6; y++){
-                toReturn += availability[x][y];
+                toReturn += availability[x][y] + ",";
             }
         }
         return toReturn;
