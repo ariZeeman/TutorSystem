@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author 341167849
  */
 public class Assignments {
-ArrayList<Peer> group = new ArrayList<>();
-Tutor one = new Tutor();
-
-
+    
+    private Tutor tutor = new Tutor();
+    private Peer peer = new Peer();
+    private Teacher teacher = new Teacher();
 }
