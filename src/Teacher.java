@@ -17,14 +17,27 @@ public class Teacher {
      * Constructor for the Teacher class/object, is subject to change as we
      * progress through the project and determine what needs to stay or go.
      *
-     * @param mail the email the teacher is registering with
      * @param last the last name of the teacher
      * @param first the first name of the teacher
+     * @param email the email address of the teacher
      */
     public Teacher(String first, String last, String email) {
         this.firstName = first;
         this.lastName = last;
         this.email = email;
+    }
+
+    /**
+     * Teacher with only a first and last name (for the purpose of seeing if we
+     * can display them from a file).
+     *
+     * @param firstName
+     * @param lastName
+     */
+    public Teacher(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        email = null;
     }
 
     /**
