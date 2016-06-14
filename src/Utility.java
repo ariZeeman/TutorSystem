@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author 349173815
  */
-public class Utilty {
+public class Utility {
 
     /**
      * Bubble/Sinking sort that is for the StockInfo objects.
@@ -52,7 +52,7 @@ public class Utilty {
         if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
-        Tutor temp = new Tutor(array[0], array[1], array[2], array[3]);
+        Tutor temp = new Tutor(array[0], array[1], array[2], array[3], Integer.parseInt(array[4]), array[5]);
         return temp;
     }
 
@@ -66,7 +66,7 @@ public class Utilty {
         if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
-        Peer temp = new Peer(array[0], array[1], array[2], array[3]);
+        Peer temp = new Peer(array[0], array[1], array[2], array[3], array[4]);
         return temp;
     }
 
@@ -80,7 +80,7 @@ public class Utilty {
         if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
-        Teacher temp = new Teacher(array[0], array[1], array[2]);
+        Teacher temp = new Teacher(array[0], array[1], array[2], array[3]);
         return temp;
     }
 
@@ -93,5 +93,12 @@ public class Utilty {
     public void addObjectToFile(Object o, PrintWriter pw) {
         pw.println(o.toString());
     }
+    
+    public Assignments createAssignment(){
+        
+        return null;
+    }
+    
+    
 
 }
