@@ -99,6 +99,11 @@ public class Utility {
         return null;
     }
     
+    public Tutor[] needVerification(Teacher teacher){ //param = teacher who tutors have asked for verification from
+        
+        return null;
+    } 
+    
     
 
 }
