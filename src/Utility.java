@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author 349173815
  */
-public class Utility {
+public class Utilty {
 
     /**
      * Bubble/Sinking sort that is for the StockInfo objects.
@@ -41,40 +41,55 @@ public class Utility {
         return array;
     }
 
-    public Tutor createTutorFromFile() throws FileNotFoundException { //have the scanner being used as a parameter? also return array of turors, or just one?
-        File f = new File("tutors.txt");
-        Scanner s = new Scanner(f);
-        //ArrayList<Tutor> temp = new ArrayList<>();
-        String[] array = null; //array of info for tutor
-        while (s.hasNext()) {
+    /**
+     * The method which creates a tutor from a file.
+     *
+     * @param s the scanner that is reading from the file
+     * @return the tutor that has been created from the file.
+     */
+    public Tutor createTutorFromFile(Scanner s) { //have the scanner being used as a parameter? also return array of turors, or just one?
+        String[] array = null; //array of info for peer
+        if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
-        Tutor temp = new Tutor(array[0], array[1], array[2], array[3]); //initializes tutor with info from line
+        Tutor temp = new Tutor(array[0], array[1], array[2], array[3]);
         return temp;
     }
-    
-    //takes a line of a file and turns it into a peer, returns one peer object
-    public Peer createPeerFromFile(Scanner s){
+
+    /**
+     *
+     * @param s
+     * @return
+     */
+    public Peer createPeerFromFile(Scanner s) {
         String[] array = null; //array of info for peer
-        while (s.hasNext()) {
+        if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
         Peer temp = new Peer(array[0], array[1], array[2], array[3]);
         return temp;
     }
-    
-    public Teacher createTeacherFromFile(Scanner s){
+
+    /**
+     *
+     * @param s
+     * @return
+     */
+    public Teacher createTeacherFromFile(Scanner s) {
         String[] array = null; //array of info for peer
-        while (s.hasNext()) {
+        if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
         Teacher temp = new Teacher(array[0], array[1], array[2]);
         return temp;
     }
-    
-    //public 
 
-    //tostring the insert object to the file
+    /**
+     * Method which prints out an object to a file
+     *
+     * @param o the object that is being created
+     * @param pw PrintWriter which prints the object to a file
+     */
     public void addObjectToFile(Object o, PrintWriter pw) {
         pw.println(o.toString());
     }
