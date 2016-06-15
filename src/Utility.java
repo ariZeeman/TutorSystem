@@ -94,10 +94,10 @@ public class Utility {
         pw.println(o.toString());
     }
     
-    public Assignments createAssignment(){
+    public Assignments createAssignment(Peer peer, Scanner s){
         
         return null;
-    }
+    } 
     
     public Tutor[] needVerification(Teacher teacher){ //param = teacher who tutors have asked for verification from
         
