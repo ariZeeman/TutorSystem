@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author 349173815
  */
-public class Utilty {
+public class Utility {
 
     /**
      * Bubble/Sinking sort that is for the StockInfo objects.
