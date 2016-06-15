@@ -1,5 +1,8 @@
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -49,9 +52,7 @@ public class Utility {
      */
     public Tutor createTutorFromFile(Scanner s) { //have the scanner being used as a parameter? also return array of turors, or just one?
         String[] array = null; //array of info for peer
-        if (s.hasNext()) {
-            array = s.nextLine().split(",");
-        }
+        array = s.nextLine().split(",");
         Tutor temp = new Tutor(array[0], array[1], array[2], array[3], Integer.parseInt(array[4]), array[5]);
         return temp;
     }
@@ -63,9 +64,7 @@ public class Utility {
      */
     public Peer createPeerFromFile(Scanner s) {
         String[] array = null; //array of info for peer
-        if (s.hasNext()) {
-            array = s.nextLine().split(",");
-        }
+        array = s.nextLine().split(",");
         Peer temp = new Peer(array[0], array[1], array[2], array[3], array[4]);
         return temp;
     }
@@ -77,9 +76,7 @@ public class Utility {
      */
     public Teacher createTeacherFromFile(Scanner s) {
         String[] array = null; //array of info for peer
-        if (s.hasNext()) {
-            array = s.nextLine().split(",");
-        }
+        array = s.nextLine().split(",");
         Teacher temp = new Teacher(array[0], array[1], array[2], array[3]);
         return temp;
     }
@@ -91,19 +88,40 @@ public class Utility {
      * @param pw PrintWriter which prints the object to a file
      */
     public void addObjectToFile(Object o, PrintWriter pw) {
-        pw.println(o.toString());
+        pw.append(o.toString());
     }
-    
-    public Assignments createAssignment(Peer peer, Scanner s){
-        
+
+    public void createAssignment(Peer peer, Scanner s) throws IOException {
+        ArrayList ar = new ArrayList(); //arraylist of tutors
+        File assignments = new File("Assignemnts.txt"); //file of assignments
+        PrintWriter pw = new PrintWriter(new FileWriter(assignments, false)); //writes assignments to file
+        Tutor temp = new Tutor(); //temporary stores tutor for comparison to peer's subject
+        while (s.hasNext()) {
+            temp = createTutorFromFile(s);
+            if (peer.getSubject().equals(temp.getSubject())) { //if the peer is looking for the subject the tutor teaches
+                ar.add(temp); //the tutor gets added
+            }
+        }
+        Tutor[] tutorArray = (Tutor[]) ar.toArray();
+        Tutor tutor = fewestPeers(tutorArray); //creates the tutor who has the fewest # of peers
+
+        Assignments assignment = new Assignments(tutor, peer); //creates new assignment
+        addObjectToFile(assignment, pw); //prints the assignment to the file
+    }
+
+    public Tutor fewestPeers(Tutor[] tutors) {
+        Tutor lowest = tutors[0];
+        for (int i = 1; i < tutors.length; i++) {
+            if (tutors[i].getNumPeers() < lowest.getNumPeers()) {
+                lowest = tutors[i];
+            }
+        }
+        return lowest;
+    }
+
+    public Tutor[] needVerification(Teacher teacher) { //param = teacher who tutors have asked for verification from
+
         return null;
-    } 
-    
-    public Tutor[] needVerification(Teacher teacher){ //param = teacher who tutors have asked for verification from
-        
-        return null;
-    } 
-    
-    
+    }
 
 }
