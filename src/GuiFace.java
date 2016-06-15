@@ -18,6 +18,8 @@ public class GuiFace extends javax.swing.JFrame {
         initComponents();
         tutorSubjectDropList.removeAllItems();
         tutorPeriodDropList.removeAllItems();
+        peerSubjectDropList.removeAllItems();
+        peerPeriodDropList.removeAllItems();
         tutorSubjectDropList.addItem("Grade 9 English");
         tutorSubjectDropList.addItem("Grade 10 English");
         tutorSubjectDropList.addItem("Grade 11 English");
@@ -49,6 +51,37 @@ public class GuiFace extends javax.swing.JFrame {
         tutorPeriodDropList.addItem("Period 4");
         tutorPeriodDropList.addItem("Period 5");
         tutorPeriodDropList.addItem("After School");
+        peerSubjectDropList.addItem("Grade 9 English");
+        peerSubjectDropList.addItem("Grade 10 English");
+        peerSubjectDropList.addItem("Grade 11 English");
+        peerSubjectDropList.addItem("Grade 12 English");
+        peerSubjectDropList.addItem("Grade 9 French(Core)");
+        peerSubjectDropList.addItem("Grade 10 French(Core)");
+        peerSubjectDropList.addItem("Grade 11 French(Core)");
+        peerSubjectDropList.addItem("Grade 12 French(Core)");
+        peerSubjectDropList.addItem("Grade 9 French(Immersion)");
+        peerSubjectDropList.addItem("Grade 10 French(Immersion)");
+        peerSubjectDropList.addItem("Grade 11 French(Immersion)");
+        peerSubjectDropList.addItem("Grade 12 French(Immersion)");
+        peerSubjectDropList.addItem("Grade 9 Math");
+        peerSubjectDropList.addItem("Grade 10 Math");
+        peerSubjectDropList.addItem("Grade 11 Math ");
+        peerSubjectDropList.addItem("Grade 12 Advanced Functions");
+        peerSubjectDropList.addItem("Grade 12 Calculus & Vectors");
+        peerSubjectDropList.addItem("Grade 9 Science");
+        peerSubjectDropList.addItem("Grade 10 Science");
+        peerSubjectDropList.addItem("Grade 11 Biology");
+        peerSubjectDropList.addItem("Grade 11 Physics");
+        peerSubjectDropList.addItem("Grade 11 Chemistry");
+        peerSubjectDropList.addItem("Grade 12 Biology");
+        peerSubjectDropList.addItem("Grade 12 Physics");
+        peerSubjectDropList.addItem("Grade 12 Chemistry");
+        peerPeriodDropList.addItem("Period 1");
+        peerPeriodDropList.addItem("Period 2");
+        peerPeriodDropList.addItem("Period 3");
+        peerPeriodDropList.addItem("Period 4");
+        peerPeriodDropList.addItem("Period 5");
+        peerPeriodDropList.addItem("After School");
     }
 
     /**
