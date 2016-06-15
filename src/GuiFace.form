@@ -194,18 +194,45 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="725" max="32767" attributes="0"/>
                               <Component id="tutorBackButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="tutorPasswordLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="tutorPhoneNumberLabel" alignment="0" pref="100" max="32767" attributes="0"/>
+                                          <Component id="tutorEmailLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="tutorLastNameLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="tutorFirstNameLabel" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="tutorLastNameField" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <Component id="tutorFirstNameField" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <Component id="tutorEmailField" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                                          <Component id="tutorPhoneNumberField" min="-2" pref="124" max="-2" attributes="0"/>
+                                          <Component id="tutorPasswordField" min="-2" pref="124" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="tutorPassConfirmLabel" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="tutorPassConfirmField" min="-2" pref="124" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="tutorTitle" min="-2" max="-2" attributes="0"/>
                                   <Component id="tutorSignupButton" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="608" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -214,9 +241,39 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tutorTitle" min="-2" pref="48" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="226" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tutorFirstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutorFirstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tutorLastNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutorLastNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tutorEmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutorEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tutorPhoneNumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutorPhoneNumberField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tutorPasswordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutorPasswordField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tutorPassConfirmLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tutorPassConfirmField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                       <Component id="tutorSignupButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="258" max="32767" attributes="0"/>
+                      <EmptySpace pref="186" max="32767" attributes="0"/>
                       <Component id="tutorBackButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -244,6 +301,48 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sign Up"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tutorFirstNameField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="tutorLastNameField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="tutorFirstNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="First Name:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="tutorLastNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Last Name:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="tutorEmailLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Email:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tutorEmailField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="tutorPhoneNumberLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Phone Number:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tutorPhoneNumberField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="tutorPasswordLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tutorPasswordField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="tutorPassConfirmLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Confirm Password:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tutorPassConfirmField">
             </Component>
           </SubComponents>
         </Container>

@@ -42,6 +42,18 @@ public class GuiFace extends javax.swing.JFrame {
         tutorTitle = new javax.swing.JLabel();
         tutorBackButton = new javax.swing.JButton();
         tutorSignupButton = new javax.swing.JButton();
+        tutorFirstNameField = new javax.swing.JTextField();
+        tutorLastNameField = new javax.swing.JTextField();
+        tutorFirstNameLabel = new javax.swing.JLabel();
+        tutorLastNameLabel = new javax.swing.JLabel();
+        tutorEmailLabel = new javax.swing.JLabel();
+        tutorEmailField = new javax.swing.JTextField();
+        tutorPhoneNumberLabel = new javax.swing.JLabel();
+        tutorPhoneNumberField = new javax.swing.JTextField();
+        tutorPasswordLabel = new javax.swing.JLabel();
+        tutorPasswordField = new javax.swing.JTextField();
+        tutorPassConfirmLabel = new javax.swing.JLabel();
+        tutorPassConfirmField = new javax.swing.JTextField();
         peerRegistryPanel = new javax.swing.JPanel();
         peerTitle = new javax.swing.JLabel();
         peerBackButton = new javax.swing.JButton();
@@ -156,6 +168,18 @@ public class GuiFace extends javax.swing.JFrame {
 
         tutorSignupButton.setText("Sign Up");
 
+        tutorFirstNameLabel.setText("First Name:");
+
+        tutorLastNameLabel.setText("Last Name:");
+
+        tutorEmailLabel.setText("Email:");
+
+        tutorPhoneNumberLabel.setText("Phone Number:");
+
+        tutorPasswordLabel.setText("Password:");
+
+        tutorPassConfirmLabel.setText("Confirm Password:");
+
         javax.swing.GroupLayout tutorRegistryPanelLayout = new javax.swing.GroupLayout(tutorRegistryPanel);
         tutorRegistryPanel.setLayout(tutorRegistryPanelLayout);
         tutorRegistryPanelLayout.setHorizontalGroup(
@@ -164,23 +188,68 @@ public class GuiFace extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tutorRegistryPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(tutorBackButton))
+                        .addGap(0, 725, Short.MAX_VALUE)
+                        .addComponent(tutorBackButton)
+                        .addGap(10, 10, 10))
+                    .addGroup(tutorRegistryPanelLayout.createSequentialGroup()
+                        .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tutorRegistryPanelLayout.createSequentialGroup()
+                                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(tutorPasswordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tutorPhoneNumberLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                    .addComponent(tutorEmailLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tutorLastNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tutorFirstNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tutorLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tutorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tutorEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tutorPhoneNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tutorPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(tutorRegistryPanelLayout.createSequentialGroup()
+                                .addComponent(tutorPassConfirmLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(tutorPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(tutorRegistryPanelLayout.createSequentialGroup()
                         .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tutorTitle)
                             .addComponent(tutorSignupButton))
-                        .addGap(0, 608, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         tutorRegistryPanelLayout.setVerticalGroup(
             tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tutorRegistryPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tutorTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(226, 226, 226)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tutorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tutorFirstNameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tutorLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tutorLastNameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tutorEmailLabel)
+                    .addComponent(tutorEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tutorPhoneNumberLabel)
+                    .addComponent(tutorPhoneNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tutorPasswordLabel)
+                    .addComponent(tutorPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tutorRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tutorPassConfirmLabel)
+                    .addComponent(tutorPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(117, 117, 117)
                 .addComponent(tutorSignupButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                 .addComponent(tutorBackButton)
                 .addContainerGap())
         );
@@ -364,6 +433,18 @@ public class GuiFace extends javax.swing.JFrame {
     private javax.swing.JPanel teacherRegistryPanel;
     private javax.swing.JLabel teacherTitle;
     private javax.swing.JButton tutorBackButton;
+    private javax.swing.JTextField tutorEmailField;
+    private javax.swing.JLabel tutorEmailLabel;
+    private javax.swing.JTextField tutorFirstNameField;
+    private javax.swing.JLabel tutorFirstNameLabel;
+    private javax.swing.JTextField tutorLastNameField;
+    private javax.swing.JLabel tutorLastNameLabel;
+    private javax.swing.JTextField tutorPassConfirmField;
+    private javax.swing.JLabel tutorPassConfirmLabel;
+    private javax.swing.JTextField tutorPasswordField;
+    private javax.swing.JLabel tutorPasswordLabel;
+    private javax.swing.JTextField tutorPhoneNumberField;
+    private javax.swing.JLabel tutorPhoneNumberLabel;
     private javax.swing.JButton tutorRegistryButton;
     private javax.swing.JPanel tutorRegistryPanel;
     private javax.swing.JButton tutorSignupButton;
