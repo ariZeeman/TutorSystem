@@ -124,4 +124,23 @@ public class Utility {
         return null;
     }
 
+    /**
+     *
+     * @param tutors this is temporary because we have a method to generate
+     * tutors and this will replace it
+     * @param teacher
+     * @return
+     */
+    public Tutor[] needVerification(Tutor[] tutors, Teacher teacher) { //param = teacher who tutors have asked for verification from
+        ArrayList<Tutor> list = new ArrayList();
+        for (int i = 0; i < tutors.length; i++) {
+            if (!tutors[i].getVisibility() && tutors[i].getSubject().equals(teacher.getSubject())) {
+                list.add(tutors[i]);
+            }
+        }
+        Tutor[] needsVerification = new Tutor[list.size()];
+        needsVerification = (Tutor[]) list.toArray();
+        return null;
+    }
+
 }
