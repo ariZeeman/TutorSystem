@@ -45,7 +45,7 @@ public class Tutor implements Comparable {
 
     /**
      * The order this is written in!!!!!!!!v important!!!!!!
-     * Subject,FirstName,LastName,PhoneNumber,Email,Availability[5][6],Visibility
+     * Subject,FirstName,LastName,PhoneNumber,Email,numPeers,password,Availability[5][6],Visibility
      *
      * @return String value to write to files
      */

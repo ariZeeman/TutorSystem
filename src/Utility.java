@@ -80,7 +80,7 @@ public class Utility {
         if (s.hasNext()) {
             array = s.nextLine().split(",");
         }
-        Teacher temp = new Teacher(array[0], array[1], array[2], array[3]);
+        Teacher temp = new Teacher(array[0], array[1], array[2], array[3], array[4]);
         return temp;
     }
 
@@ -93,17 +93,29 @@ public class Utility {
     public void addObjectToFile(Object o, PrintWriter pw) {
         pw.println(o.toString());
     }
-    
-    public Assignments createAssignment(Peer peer, Scanner s){
-        
+
+    public Assignments createAssignment(Peer peer, Scanner s) {
+
         return null;
-    } 
-    
-    public Tutor[] needVerification(Teacher teacher){ //param = teacher who tutors have asked for verification from
-        
+    }
+
+    /**
+     *
+     * @param tutors this is temporary because we have a method to generate
+     * tutors and this will replace it
+     * @param teacher
+     * @return
+     */
+    public Tutor[] needVerification(Tutor[] tutors, Teacher teacher) { //param = teacher who tutors have asked for verification from
+        ArrayList<Tutor> list = new ArrayList();
+        for (int i = 0; i < tutors.length; i++) {
+            if (!tutors[i].getVisibility() && tutors[i].getSubject().equals(teacher.getSubject())) {
+                list.add(tutors[i]);
+            }
+        }
+        Tutor[] needsVerification = new Tutor[list.size()];
+        needsVerification = (Tutor[]) list.toArray();
         return null;
-    } 
-    
-    
+    }
 
 }
