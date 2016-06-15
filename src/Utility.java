@@ -77,7 +77,7 @@ public class Utility {
     public Teacher createTeacherFromFile(Scanner s) {
         String[] array = null; //array of info for peer
         array = s.nextLine().split(",");
-        Teacher temp = new Teacher(array[0], array[1], array[2], array[3]);
+        Teacher temp = new Teacher(array[0], array[1], array[2], array[3], array[4]);
         return temp;
     }
 
