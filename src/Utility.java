@@ -1,3 +1,4 @@
+
 import java.awt.CardLayout;
 import java.io.EOFException;
 import java.io.File;
@@ -122,19 +123,14 @@ public class Utility {
         return lowest;
     }
 
-    public Tutor[] needVerification(Teacher teacher) { //param = teacher who tutors have asked for verification from
-
-        return null;
-    }
-
     /**
      *
-     * @param tutors this is temporary because we have a method to generate
-     * tutors and this will replace it
+     *
      * @param teacher
      * @return
      */
-    public Tutor[] needVerification(Tutor[] tutors, Teacher teacher) { //param = teacher who tutors have asked for verification from
+    public Tutor[] needVerification(Teacher teacher) { //param = teacher who tutors have asked for verification from
+        Tutor[] tutors = generateTutors();
         ArrayList<Tutor> list = new ArrayList();
         for (int i = 0; i < tutors.length; i++) {
             if (!tutors[i].getVisibility() && tutors[i].getSubject().equals(teacher.getSubject())) {
