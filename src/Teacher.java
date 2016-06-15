@@ -12,6 +12,7 @@ public class Teacher {
     private String email;
     private String lastName;
     private String firstName;
+    private String password;
 
     /**
      * Constructor for the Teacher class/object, is subject to change as we
@@ -21,10 +22,11 @@ public class Teacher {
      * @param last the last name of the teacher
      * @param first the first name of the teacher
      */
-    public Teacher(String first, String last, String email) {
+    public Teacher(String first, String last, String email, String password) {
         this.firstName = first;
         this.lastName = last;
         this.email = email;
+        this.password = password;
     }
 
     /**

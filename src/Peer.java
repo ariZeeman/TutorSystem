@@ -12,6 +12,7 @@ public class Peer {
     private String subject; //subject to be taught
     private String phoneNumber;
     private String email;
+    private String password;
     //private String oneOnOne;
     private Boolean[][] availability = new Boolean[5][6];
     private String firstName;
@@ -22,11 +23,12 @@ public class Peer {
     public Peer(){
     }
     
-    public Peer(String subject, String firstName, String lastName, String phoneNumber){
+    public Peer(String subject, String firstName, String lastName, String phoneNumber, String password){
         this.subject = subject;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
+        this.password = password;
     }
     
     
