@@ -12,19 +12,31 @@ public class Teacher {
     private String email;
     private String lastName;
     private String firstName;
+    private String password;
+    private String subject;
 
     /**
      * Constructor for the Teacher class/object, is subject to change as we
      * progress through the project and determine what needs to stay or go.
      *
+     * @param email the email the teacher is registering with
      * @param last the last name of the teacher
      * @param first the first name of the teacher
-     * @param email the email address of the teacher
+     * @param password
+     * @param subject the subject that the teacher is registering for (new
+     * teacher for each subject, ex RD that teachers computer science would be
+     * different from one that teaches math)
      */
-    public Teacher(String first, String last, String email) {
+    public Teacher(String first, String last, String email, String password, String subject) {
         this.firstName = first;
         this.lastName = last;
         this.email = email;
+        this.password = password;
+        this.subject = subject;
+    }
+
+    public String getSubject() {
+        return subject;
     }
 
     /**
@@ -104,12 +116,11 @@ public class Teacher {
      * This method prints out a teacher's name as a string (for use in a
      * drop-down menu)
      *
-     * @return the first letter of the teacher's last name with a comma followed
-     * by their first name's first letter. (ex. Mike R-D would appear as "R-D,
-     * M.").
+     * @return the first name, last name, email, password and subject (comma delimited)
+     * ex. : Mike, R-D, mikeR-D@example.ca, computerScienceIsCool123, Computer Science.
      */
     @Override
     public String toString() {
-        return firstName + "," + lastName + "," + email;
+        return firstName + "," + lastName + "," + email + "," + password + "," + subject;
     }
 }

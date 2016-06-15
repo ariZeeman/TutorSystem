@@ -11,8 +11,46 @@ import java.util.ArrayList;
  * @author 341167849
  */
 public class Assignments {
-ArrayList<Peer> group = new ArrayList<>();
-Tutor one = new Tutor();
+    
+    private Tutor tutor = new Tutor();
+    private Peer peer = new Peer();
+    private Teacher teacher = new Teacher();
+    
+    public Assignments(){
+        
+    }
+    
+    public Assignments(Tutor newTutor, Peer newPeer){
+        this.setTutor(newTutor);
+        this.setPeer(newPeer);
+    }
 
+    /**
+     * @return the tutor
+     */
+    public Tutor getTutor() {
+        return tutor;
+    }
 
+    /**
+     * @param tutor the tutor to set
+     */
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
+    }
+
+    /**
+     * @return the peer
+     */
+    public Peer getPeer() {
+        return peer;
+    }
+
+    /**
+     * @param peer the peer to set
+     */
+    public void setPeer(Peer peer) {
+        this.peer = peer;
+    }
+    
 }

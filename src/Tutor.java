@@ -13,6 +13,9 @@ public class Tutor implements Comparable {
     private String firstName, lastName;
     private String phoneNumber;
     private String email;
+    private int numPeers;
+    private String password;
+    private Teacher teacher = new Teacher();
     private boolean[][] availability = new boolean[5][6];
     private boolean visibility = false;
 
@@ -31,23 +34,25 @@ public class Tutor implements Comparable {
      * @param firstName tutors first name
      * @param lastName tutors last name
      */
-    public Tutor(String subject, String firstName, String lastName, String phoneNumber) {
+    public Tutor(String subject, String firstName, String lastName, String phoneNumber, int numPeers, String password) {
         this.subject = subject;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
+        this.numPeers = numPeers;
+        this.password = password;
     }
 
     /**
      * The order this is written in!!!!!!!!v important!!!!!!
-     * Subject,FirstName,LastName,PhoneNumber,Email,Availability[5][6],Visibility
+     * Subject,FirstName,LastName,PhoneNumber,Email,numPeers,password,Availability[5][6],Visibility
      *
      * @return String value to write to files
      */
     @Override
     public String toString() {
         String string;
-        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + email + ",";
+        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + email + "," + getNumPeers() + "," + getPassword() + ",";
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
                 string = string + availability[i][j] + ",";
@@ -215,5 +220,33 @@ public class Tutor implements Comparable {
     public int compareTo(Object o) {
         Tutor b = (Tutor) o;
         return this.subject.compareTo(b.subject);
+    }
+
+    /**
+     * @return the numPeers
+     */
+    public int getNumPeers() {
+        return numPeers;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param numPeers the numPeers to set
+     */
+    public void setNumPeers(int numPeers) {
+        this.numPeers = numPeers;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
