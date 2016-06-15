@@ -138,7 +138,7 @@ public class Utility {
             }
         }
         Tutor[] needsVerification = new Tutor[list.size()];
-        needsVerification = (Tutor[]) list.toArray();
+        needsVerification = list.toArray(tutors);
         return null;
     }
 
@@ -177,6 +177,7 @@ public class Utility {
      */
     public Teacher[] generateTeachers() {
         try {
+            //teacher file
             File f = new File("teachers.txt");
             Scanner s = new Scanner(f);
             ArrayList<Teacher> list = new ArrayList();
