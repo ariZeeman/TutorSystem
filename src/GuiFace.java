@@ -32,69 +32,13 @@ public class GuiFace extends javax.swing.JFrame {
         teacherSubjectDropList.removeAllItems();
         for (int i = 0; i < subjectArray.length; i++) {
             tutorSubjectDropList.addItem(subjectArray[i]);
+            peerSubjectDropList.addItem(subjectArray[i]);
+            teacherSubjectDropList.addItem(subjectArray[i]);
         }
-        tutorPeriodDropList.addItem("Period 1");
-        tutorPeriodDropList.addItem("Period 2");
-        tutorPeriodDropList.addItem("Period 3");
-        tutorPeriodDropList.addItem("Period 4");
-        tutorPeriodDropList.addItem("Period 5");
-        tutorPeriodDropList.addItem("After School");
-        peerSubjectDropList.addItem("Grade 9 English");
-        peerSubjectDropList.addItem("Grade 10 English");
-        peerSubjectDropList.addItem("Grade 11 English");
-        peerSubjectDropList.addItem("Grade 12 English");
-        peerSubjectDropList.addItem("Grade 9 French(Core)");
-        peerSubjectDropList.addItem("Grade 10 French(Core)");
-        peerSubjectDropList.addItem("Grade 11 French(Core)");
-        peerSubjectDropList.addItem("Grade 12 French(Core)");
-        peerSubjectDropList.addItem("Grade 9 French(Immersion)");
-        peerSubjectDropList.addItem("Grade 10 French(Immersion)");
-        peerSubjectDropList.addItem("Grade 11 French(Immersion)");
-        peerSubjectDropList.addItem("Grade 12 French(Immersion)");
-        peerSubjectDropList.addItem("Grade 9 Math");
-        peerSubjectDropList.addItem("Grade 10 Math");
-        peerSubjectDropList.addItem("Grade 11 Math");
-        peerSubjectDropList.addItem("Grade 12 Advanced Functions");
-        peerSubjectDropList.addItem("Grade 12 Calculus & Vectors");
-        peerSubjectDropList.addItem("Grade 9 Science");
-        peerSubjectDropList.addItem("Grade 10 Science");
-        peerSubjectDropList.addItem("Grade 11 Biology");
-        peerSubjectDropList.addItem("Grade 11 Physics");
-        peerSubjectDropList.addItem("Grade 11 Chemistry");
-        peerSubjectDropList.addItem("Grade 12 Biology");
-        peerSubjectDropList.addItem("Grade 12 Physics");
-        peerSubjectDropList.addItem("Grade 12 Chemistry");
-        peerPeriodDropList.addItem("Period 1");
-        peerPeriodDropList.addItem("Period 2");
-        peerPeriodDropList.addItem("Period 3");
-        peerPeriodDropList.addItem("Period 4");
-        peerPeriodDropList.addItem("Period 5");
-        peerPeriodDropList.addItem("After School");
-        teacherSubjectDropList.addItem("Grade 9 English");
-        teacherSubjectDropList.addItem("Grade 10 English");
-        teacherSubjectDropList.addItem("Grade 11 English");
-        teacherSubjectDropList.addItem("Grade 12 English");
-        teacherSubjectDropList.addItem("Grade 9 French(Core)");
-        teacherSubjectDropList.addItem("Grade 10 French(Core)");
-        teacherSubjectDropList.addItem("Grade 11 French(Core)");
-        teacherSubjectDropList.addItem("Grade 12 French(Core)");
-        teacherSubjectDropList.addItem("Grade 9 French(Immersion)");
-        teacherSubjectDropList.addItem("Grade 10 French(Immersion)");
-        teacherSubjectDropList.addItem("Grade 11 French(Immersion)");
-        teacherSubjectDropList.addItem("Grade 12 French(Immersion)");
-        teacherSubjectDropList.addItem("Grade 9 Math");
-        teacherSubjectDropList.addItem("Grade 10 Math");
-        teacherSubjectDropList.addItem("Grade 11 Math");
-        teacherSubjectDropList.addItem("Grade 12 Advanced Functions");
-        teacherSubjectDropList.addItem("Grade 12 Calculus & Vectors");
-        teacherSubjectDropList.addItem("Grade 9 Science");
-        teacherSubjectDropList.addItem("Grade 10 Science");
-        teacherSubjectDropList.addItem("Grade 11 Biology");
-        teacherSubjectDropList.addItem("Grade 11 Physics");
-        teacherSubjectDropList.addItem("Grade 11 Chemistry");
-        teacherSubjectDropList.addItem("Grade 12 Biology");
-        teacherSubjectDropList.addItem("Grade 12 Physics");
-        teacherSubjectDropList.addItem("Grade 12 Chemistry");
+        for (int i = 0; i < periodArray.length; i++) {
+            tutorPeriodDropList.addItem(periodArray[i]);
+            peerPeriodDropList.addItem(periodArray[i]);
+        }
     }
 
     /**
