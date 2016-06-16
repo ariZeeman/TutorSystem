@@ -95,6 +95,12 @@ public class Utility {
         pw.append(o.toString());
     }
 
+    /**
+     *
+     * @param peer
+     * @param s
+     * @throws IOException
+     */
     public void createAssignment(Peer peer, Scanner s) throws IOException {
         ArrayList ar = new ArrayList(); //arraylist of tutors
         File assignments = new File("Assignemnts.txt"); //file of assignments
@@ -113,6 +119,13 @@ public class Utility {
         addObjectToFile(assignment, pw); //prints the assignment to the file
     }
 
+    /**
+     * Method which returns the tutor with the lowest amount of people
+     * registered with them.
+     *
+     * @param tutors
+     * @return
+     */
     public Tutor fewestPeers(Tutor[] tutors) {
         Tutor lowest = tutors[0];
         for (int i = 1; i < tutors.length; i++) {
@@ -124,19 +137,24 @@ public class Utility {
     }
 
     /**
+     * This is the method which creates an array of tutors that require
+     * verification.
      *
-     *
-     * @param teacher
-     * @return
+     * @param teacher the teacher who is looking for students to verify
+     * @return an array of students that require verification from this teacher
      */
     public Tutor[] needVerification(Teacher teacher) { //param = teacher who tutors have asked for verification from
+        //create a new array of tutors that contains every tutor
         Tutor[] tutors = generateTutors();
+        //new arraylist since we aren't sure how many tutors we are going to need
         ArrayList<Tutor> list = new ArrayList();
-        for (int i = 0; i < tutors.length; i++) {
-            if (!tutors[i].getVisibility() && tutors[i].getSubject().equals(teacher.getSubject())) {
-                list.add(tutors[i]);
+        for (Tutor tutor : tutors) {
+            //if the tutor is NOT visible (not verified) AND their subject is the same as the teacher's subject
+            if (!tutor.getVisibility() && tutor.getSubject().equals(teacher.getSubject())) {
+                list.add(tutor);
             }
         }
+        //pump the list into the new needsVerification array
         Tutor[] needsVerification = new Tutor[list.size()];
         needsVerification = list.toArray(tutors);
         return null;
@@ -150,12 +168,15 @@ public class Utility {
      */
     public Tutor[] generateTutors() {
         try {
+            //open the tutor file and put a scanner on it
             File f = new File("tutors.txt");
             Scanner s = new Scanner(f);
             ArrayList<Tutor> list = new ArrayList();
             Tutor[] me;
             int counter = 0;
+            //as long as there is a new line in the file, it will cycle through it
             while (s.hasNext()) {
+                //add the createTutorFromFile result
                 list.add(createTutorFromFile(s));
                 counter++;
             }
