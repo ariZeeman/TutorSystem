@@ -14,6 +14,14 @@ public class GuiFace extends javax.swing.JFrame {
     /**
      * Creates new form GuiFace
      */
+    private final String[] subjectArray = {"Grade 9 English", "Grade 10 English", "Grade 11 English", "Grade 12 English",
+        "Grade 9 French(Core)", "Grade 10 French(Core)", "Grade 11 French(Core)", "Grade 12 French(Core)", "Grade 9 French(Immersion)",
+        "Grade 10 French(Immersion)", "Grade 11 French(Immersion)", "Grade 12 French(Immersion)", "Grade 9 Math",
+        "Grade 10 Math", "Grade 11 Math", "Grade 12 Advanced Functions",
+        "Grade 12 Calculus & Vectors", "Grade 9 Science", "Grade 10 Science",
+        "Grade 11 Biology", "Grade 11 Physics", "Grade 11 Chemistry", "Grade 12 Biology",
+        "Grade 12 Physics", "Grade 12 Chemistry"};
+    private final String[] periodArray = {"period 1", "period 2", "period 3", "period 4", "period 5", "after school"};
 
     public GuiFace() {
         initComponents();
@@ -22,31 +30,9 @@ public class GuiFace extends javax.swing.JFrame {
         peerSubjectDropList.removeAllItems();
         peerPeriodDropList.removeAllItems();
         teacherSubjectDropList.removeAllItems();
-        tutorSubjectDropList.addItem("Grade 9 English");
-        tutorSubjectDropList.addItem("Grade 10 English");
-        tutorSubjectDropList.addItem("Grade 11 English");
-        tutorSubjectDropList.addItem("Grade 12 English");
-        tutorSubjectDropList.addItem("Grade 9 French(Core)");
-        tutorSubjectDropList.addItem("Grade 10 French(Core)");
-        tutorSubjectDropList.addItem("Grade 11 French(Core)");
-        tutorSubjectDropList.addItem("Grade 12 French(Core)");
-        tutorSubjectDropList.addItem("Grade 9 French(Immersion)");
-        tutorSubjectDropList.addItem("Grade 10 French(Immersion)");
-        tutorSubjectDropList.addItem("Grade 11 French(Immersion)");
-        tutorSubjectDropList.addItem("Grade 12 French(Immersion)");
-        tutorSubjectDropList.addItem("Grade 9 Math");
-        tutorSubjectDropList.addItem("Grade 10 Math");
-        tutorSubjectDropList.addItem("Grade 11 Math ");
-        tutorSubjectDropList.addItem("Grade 12 Advanced Functions");
-        tutorSubjectDropList.addItem("Grade 12 Calculus & Vectors");
-        tutorSubjectDropList.addItem("Grade 9 Science");
-        tutorSubjectDropList.addItem("Grade 10 Science");
-        tutorSubjectDropList.addItem("Grade 11 Biology");
-        tutorSubjectDropList.addItem("Grade 11 Physics");
-        tutorSubjectDropList.addItem("Grade 11 Chemistry");
-        tutorSubjectDropList.addItem("Grade 12 Biology");
-        tutorSubjectDropList.addItem("Grade 12 Physics");
-        tutorSubjectDropList.addItem("Grade 12 Chemistry");
+        for (int i = 0; i < subjectArray.length; i++) {
+            tutorSubjectDropList.addItem(subjectArray[i]);
+        }
         tutorPeriodDropList.addItem("Period 1");
         tutorPeriodDropList.addItem("Period 2");
         tutorPeriodDropList.addItem("Period 3");
@@ -67,7 +53,7 @@ public class GuiFace extends javax.swing.JFrame {
         peerSubjectDropList.addItem("Grade 12 French(Immersion)");
         peerSubjectDropList.addItem("Grade 9 Math");
         peerSubjectDropList.addItem("Grade 10 Math");
-        peerSubjectDropList.addItem("Grade 11 Math ");
+        peerSubjectDropList.addItem("Grade 11 Math");
         peerSubjectDropList.addItem("Grade 12 Advanced Functions");
         peerSubjectDropList.addItem("Grade 12 Calculus & Vectors");
         peerSubjectDropList.addItem("Grade 9 Science");
@@ -98,7 +84,7 @@ public class GuiFace extends javax.swing.JFrame {
         teacherSubjectDropList.addItem("Grade 12 French(Immersion)");
         teacherSubjectDropList.addItem("Grade 9 Math");
         teacherSubjectDropList.addItem("Grade 10 Math");
-        teacherSubjectDropList.addItem("Grade 11 Math ");
+        teacherSubjectDropList.addItem("Grade 11 Math");
         teacherSubjectDropList.addItem("Grade 12 Advanced Functions");
         teacherSubjectDropList.addItem("Grade 12 Calculus & Vectors");
         teacherSubjectDropList.addItem("Grade 9 Science");
@@ -729,16 +715,21 @@ public class GuiFace extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GuiFace.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GuiFace.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GuiFace.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GuiFace.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GuiFace.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GuiFace.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GuiFace.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GuiFace.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
