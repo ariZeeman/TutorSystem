@@ -51,7 +51,7 @@ public class SendMail {
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(teacher.getEmail()));
             message.setSubject("Someone requires your permission to be a tutor!");
-            message.setText("Dear Mr./Ms." + teacher.getLastName() + "," + "\nA student requires your permission in order to be registered as a tutor.");
+            message.setText("Dear Mr./Ms." + teacher.getLastName() + "," + "\n\nA student requires your permission in order to be registered as a tutor.");
             Transport.send(message);
             System.out.println("Done");
         } catch (MessagingException e) {
