@@ -23,7 +23,7 @@ public class SendMail {
 
     protected final String username = "NHSTutorDoNotReply@gmail.com";
     protected final String password = "HAYDN1ari2LEN3";
-//http://stackoverflow.com/questions/3649014/send-email-using-java
+    //source page: http://stackoverflow.com/questions/3649014/send-email-using-java
 
     /**
      * This method will be responsible for sending mail...eventually. Will
