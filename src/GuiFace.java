@@ -20,6 +20,7 @@ public class GuiFace extends javax.swing.JFrame {
         tutorPeriodDropList.removeAllItems();
         peerSubjectDropList.removeAllItems();
         peerPeriodDropList.removeAllItems();
+        teacherSubjectDropList.removeAllItems();
         tutorSubjectDropList.addItem("Grade 9 English");
         tutorSubjectDropList.addItem("Grade 10 English");
         tutorSubjectDropList.addItem("Grade 11 English");
@@ -82,6 +83,31 @@ public class GuiFace extends javax.swing.JFrame {
         peerPeriodDropList.addItem("Period 4");
         peerPeriodDropList.addItem("Period 5");
         peerPeriodDropList.addItem("After School");
+        teacherSubjectDropList.addItem("Grade 9 English");
+        teacherSubjectDropList.addItem("Grade 10 English");
+        teacherSubjectDropList.addItem("Grade 11 English");
+        teacherSubjectDropList.addItem("Grade 12 English");
+        teacherSubjectDropList.addItem("Grade 9 French(Core)");
+        teacherSubjectDropList.addItem("Grade 10 French(Core)");
+        teacherSubjectDropList.addItem("Grade 11 French(Core)");
+        teacherSubjectDropList.addItem("Grade 12 French(Core)");
+        teacherSubjectDropList.addItem("Grade 9 French(Immersion)");
+        teacherSubjectDropList.addItem("Grade 10 French(Immersion)");
+        teacherSubjectDropList.addItem("Grade 11 French(Immersion)");
+        teacherSubjectDropList.addItem("Grade 12 French(Immersion)");
+        teacherSubjectDropList.addItem("Grade 9 Math");
+        teacherSubjectDropList.addItem("Grade 10 Math");
+        teacherSubjectDropList.addItem("Grade 11 Math ");
+        teacherSubjectDropList.addItem("Grade 12 Advanced Functions");
+        teacherSubjectDropList.addItem("Grade 12 Calculus & Vectors");
+        teacherSubjectDropList.addItem("Grade 9 Science");
+        teacherSubjectDropList.addItem("Grade 10 Science");
+        teacherSubjectDropList.addItem("Grade 11 Biology");
+        teacherSubjectDropList.addItem("Grade 11 Physics");
+        teacherSubjectDropList.addItem("Grade 11 Chemistry");
+        teacherSubjectDropList.addItem("Grade 12 Biology");
+        teacherSubjectDropList.addItem("Grade 12 Physics");
+        teacherSubjectDropList.addItem("Grade 12 Chemistry");
     }
 
     /**
@@ -147,6 +173,21 @@ public class GuiFace extends javax.swing.JFrame {
         teacherRegistryPanel = new javax.swing.JPanel();
         teacherTitle = new javax.swing.JLabel();
         teacherBackButton = new javax.swing.JButton();
+        teacherPhoneNumberLabel = new javax.swing.JLabel();
+        teacherPasswordLabel = new javax.swing.JLabel();
+        teacherPassConfirmLabel = new javax.swing.JLabel();
+        teacherFirstNameLabel = new javax.swing.JLabel();
+        teacherLastNameLabel = new javax.swing.JLabel();
+        teacherEmailLabel = new javax.swing.JLabel();
+        teacherEmailField = new javax.swing.JTextField();
+        teacherLastNameField = new javax.swing.JTextField();
+        teacherPhoneNumberField = new javax.swing.JTextField();
+        teacherPassConfirmField = new javax.swing.JTextField();
+        teacherPasswordField = new javax.swing.JTextField();
+        teacherFirstNameField = new javax.swing.JTextField();
+        teacherSignupButton = new javax.swing.JButton();
+        teacherSubjectLabel = new javax.swing.JLabel();
+        teacherSubjectDropList = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -491,7 +532,7 @@ public class GuiFace extends javax.swing.JFrame {
         basePanel.add(peerRegistryPanel, "peerPanel");
 
         teacherTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        teacherTitle.setText("Become an admin:");
+        teacherTitle.setText("Become an Admin:");
 
         teacherBackButton.setText("Back");
         teacherBackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -500,25 +541,107 @@ public class GuiFace extends javax.swing.JFrame {
             }
         });
 
+        teacherPhoneNumberLabel.setText("Phone Number:");
+
+        teacherPasswordLabel.setText("Password:");
+
+        teacherPassConfirmLabel.setText("Confirm Password:");
+
+        teacherFirstNameLabel.setText("First Name:");
+
+        teacherLastNameLabel.setText("Last Name:");
+
+        teacherEmailLabel.setText("Email:");
+
+        teacherFirstNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teacherFirstNameFieldActionPerformed(evt);
+            }
+        });
+
+        teacherSignupButton.setText("Sign Up");
+
+        teacherSubjectLabel.setText("Subject Taught:");
+
+        teacherSubjectDropList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout teacherRegistryPanelLayout = new javax.swing.GroupLayout(teacherRegistryPanel);
         teacherRegistryPanel.setLayout(teacherRegistryPanelLayout);
         teacherRegistryPanelLayout.setHorizontalGroup(
             teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(teacherTitle)
-                .addContainerGap(592, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, teacherRegistryPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(teacherBackButton)
-                .addContainerGap())
+                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, teacherRegistryPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(teacherBackButton))
+                    .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
+                        .addComponent(teacherSignupButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
+                        .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(teacherTitle)
+                            .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
+                                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(teacherSubjectLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(teacherEmailLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(teacherPhoneNumberLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(teacherPasswordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(teacherPassConfirmLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                    .addComponent(teacherLastNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(teacherFirstNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(27, 27, 27)
+                                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(teacherSubjectDropList, 0, 240, Short.MAX_VALUE)
+                                    .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(teacherFirstNameField)
+                                        .addComponent(teacherLastNameField)
+                                        .addComponent(teacherEmailField)
+                                        .addComponent(teacherPhoneNumberField)
+                                        .addComponent(teacherPassConfirmField)
+                                        .addComponent(teacherPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)))))
+                        .addContainerGap(492, Short.MAX_VALUE))))
         );
         teacherRegistryPanelLayout.setVerticalGroup(
             teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(teacherTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 526, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
+                        .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(teacherLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(teacherEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(teacherEmailLabel)))
+                            .addComponent(teacherFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(teacherPhoneNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(teacherPhoneNumberLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(teacherPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(teacherPasswordLabel)))
+                    .addGroup(teacherRegistryPanelLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(teacherLastNameLabel))
+                    .addComponent(teacherFirstNameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(teacherPassConfirmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(teacherPassConfirmLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(teacherRegistryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(teacherSubjectDropList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(teacherSubjectLabel))
+                .addGap(88, 88, 88)
+                .addComponent(teacherSignupButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
                 .addComponent(teacherBackButton)
                 .addContainerGap())
         );
@@ -589,6 +712,10 @@ public class GuiFace extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_peerFirstNameFieldActionPerformed
 
+    private void teacherFirstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherFirstNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_teacherFirstNameFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -653,8 +780,23 @@ public class GuiFace extends javax.swing.JFrame {
     private javax.swing.JLabel peerSubjectLabel;
     private javax.swing.JLabel peerTitle;
     private javax.swing.JButton teacherBackButton;
+    private javax.swing.JTextField teacherEmailField;
+    private javax.swing.JLabel teacherEmailLabel;
+    private javax.swing.JTextField teacherFirstNameField;
+    private javax.swing.JLabel teacherFirstNameLabel;
+    private javax.swing.JTextField teacherLastNameField;
+    private javax.swing.JLabel teacherLastNameLabel;
+    private javax.swing.JTextField teacherPassConfirmField;
+    private javax.swing.JLabel teacherPassConfirmLabel;
+    private javax.swing.JTextField teacherPasswordField;
+    private javax.swing.JLabel teacherPasswordLabel;
+    private javax.swing.JTextField teacherPhoneNumberField;
+    private javax.swing.JLabel teacherPhoneNumberLabel;
     private javax.swing.JButton teacherRegistryButton;
     private javax.swing.JPanel teacherRegistryPanel;
+    private javax.swing.JButton teacherSignupButton;
+    private javax.swing.JComboBox teacherSubjectDropList;
+    private javax.swing.JLabel teacherSubjectLabel;
     private javax.swing.JLabel teacherTitle;
     private javax.swing.JButton tutorBackButton;
     private javax.swing.JTextField tutorEmailField;
