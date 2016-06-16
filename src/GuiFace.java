@@ -93,7 +93,6 @@ public class GuiFace extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox2 = new javax.swing.JComboBox();
         basePanel = new javax.swing.JPanel();
         loginPanel = new javax.swing.JPanel();
         loginText1 = new javax.swing.JLabel();
@@ -148,8 +147,6 @@ public class GuiFace extends javax.swing.JFrame {
         teacherRegistryPanel = new javax.swing.JPanel();
         teacherTitle = new javax.swing.JLabel();
         teacherBackButton = new javax.swing.JButton();
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -629,7 +626,6 @@ public class GuiFace extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel basePanel;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JLabel loginText1;
