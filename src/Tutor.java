@@ -45,14 +45,14 @@ public class Tutor implements Comparable {
 
     /**
      * The order this is written in!!!!!!!!v important!!!!!!
-     * Subject,FirstName,LastName,PhoneNumber,Email,Availability[5][6],Visibility
+     * Subject,FirstName,LastName,PhoneNumber,Email,numPeers,password,Availability[5][6],Visibility
      *
      * @return String value to write to files
      */
     @Override
     public String toString() {
         String string;
-        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + email + "," + numPeers + "," + password + ",";
+        string = subject + "," + firstName + "," + lastName + "," + phoneNumber + "," + email + "," + getNumPeers() + "," + getPassword() + ",";
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
                 string = string + availability[i][j] + ",";
@@ -220,5 +220,33 @@ public class Tutor implements Comparable {
     public int compareTo(Object o) {
         Tutor b = (Tutor) o;
         return this.subject.compareTo(b.subject);
+    }
+
+    /**
+     * @return the numPeers
+     */
+    public int getNumPeers() {
+        return numPeers;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param numPeers the numPeers to set
+     */
+    public void setNumPeers(int numPeers) {
+        this.numPeers = numPeers;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
